@@ -6,10 +6,10 @@ alternar y transformar
 
 @keyframes animacion_test{
     from{
-        background-color: rgb(9, 211, 150);
+        background-color: rgb(243, 219, 6);
     }
     to{
-        background-color: rgb(88, 30, 197);
+        background-color: #0bfcf0;
     }
 }
 
@@ -45,7 +45,7 @@ alternar y transformar
 
 .label{
     width: 64px;
-    background-color: rgb(60, 189, 85);
+    background-color: rgb(81, 175, 204);
     color:white;
     font-size: 1rem;
     padding: 1rem;
@@ -63,8 +63,8 @@ alternar y transformar
 .loader{
     width: 64px;
     height: 64px;
-    border: 5px solid rgb(170, 30, 90);
-    border-top: 5px solid rgb(88, 190, 45);    
+    border: 5px solid rgb(214, 14, 14);
+    border-top: 5px solid rgb(23, 0, 233);    
     border-radius: 50%;
     animation: girar 2s linear infinite;
 }
@@ -72,8 +72,8 @@ alternar y transformar
 .loader-doble{
     width: 64px;
     height: 64px;
-    border: 16px solid #2d11cc;
-    border-top: 16px solid rgb(216, 138, 21);
+    border: 16px solid #cc1111;
+    border-top: 16px solid rgb(250, 171, 0);
     border-bottom: 16px solid rgb(218, 240, 23);    
     border-radius: 50%;
     animation: girar 2s ease-in-out infinite;
@@ -81,11 +81,11 @@ alternar y transformar
 
 .animada{
     width: 100%;
-    background-color: red;
+    background-color: rgb(0, 255, 234);
     color: white;
     text-align: center;
     height: 200px;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     align-items: center;
     animation-name: animacion_test;
