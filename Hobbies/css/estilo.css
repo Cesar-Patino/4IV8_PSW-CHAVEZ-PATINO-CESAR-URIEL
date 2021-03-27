@@ -1,0 +1,102 @@
+.fondo-grande{
+    border:4px solid #d89311;
+    border-radius: 11px;
+    background-color: rgb(94, 58, 29);
+    margin-top: 5px;
+}
+
+html{
+    background-color: rgb(94, 58, 29);
+}
+
+article{
+    width:45%;
+    display: inline-block;
+    height: 250px;
+    background-color: rgb(94, 58, 29);
+    border-radius: 7%;
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 20px;
+    margin-bottom: 5px;
+
+}
+
+.segundo-contenedor{
+    background-color: #d89311;
+    border-radius: 11px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 10px;
+
+}
+
+section{
+    background-color: #d89311;
+    border-radius: 11px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+article{
+    color: aliceblue;
+    font-size: 16px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 390px;
+}
+
+.texto{
+    color:black;
+    font-size: 18px;
+    font-style: italic;
+    font-style:oblique;
+
+}
+
+.uno{
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
+    height: 150px;
+    width: 170px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #d89311;
+} 
+@-webkit-keyframes spin{
+     100%{-webkit-transform: rotate(360deg);}
+     }
+
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+
+footer,nav{
+    background-color: #d89311;
+    border-radius: 11px;
+    padding-top: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.redes{
+    height: 80px;
+    width: 80px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(94, 58, 29);
+}
+
+.redes2{
+    height: 80px;
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(94, 58, 29);
+}
