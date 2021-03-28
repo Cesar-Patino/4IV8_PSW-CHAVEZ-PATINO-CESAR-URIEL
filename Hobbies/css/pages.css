@@ -1,27 +1,21 @@
 nav{
-    background-color: #d89311;
-    margin: 5px;
-    border-radius: 11px;
+    background-color: #641515;
+    margin:5px;
+    width: 100.2%;
 }
 
 footer{
-    background-color: #d89311;
-    border-radius: 11px;
-    padding-top: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    background-color:#641515;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin: 5px;
+    width:100.2%;
 }
 
 section{
     display: inline-block;
-    border-radius: 10px;
-    background-color: #d89311;
-    width: 96%;
-    height: auto;
-    padding-bottom: 10px;
+    background-color: #641515;
+    width: 98%;
     padding-left: 15px;
     padding-right: 15px;
     margin-right: 5px;
@@ -29,13 +23,11 @@ section{
 }
 
 .fondo-grande{
-    border:4px solid #d89311;
-    border-radius: 10px;
-    background-color: rgb(94, 58, 29);
+    background-color: #e7d3af;
 }
 
 html, body{
-    background-color: rgb(94, 58, 29);
+    background-color: #e7d3af;
     font-style: italic;
 }
 
@@ -43,7 +35,7 @@ html, body{
     height: 150px;
     width: 170px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(94, 58, 29);
+    box-shadow: 5px 5px 5px #e7d3af;
 }
 
 @-webkit-keyframes spin{
@@ -58,17 +50,17 @@ html, body{
 }
 
 .dos{
-    height: 150px;
-    width: 170px;
+    height: 250px;
+    width: 320px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(94, 58, 29);
+    box-shadow: 5px 5px 5px #e7d3af;
 }
 
 .tres{
     height: 200px;
     width: 250px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(94, 58, 29);
+    box-shadow: 5px 5px 5px #e7d3af;
 }
 
 .cuatro{
@@ -91,3 +83,14 @@ html, body{
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgb(94, 58, 29);
 }
+
+body{
+    color: #e7d3af;
+    font-style: italic;
+}
+
+img{
+    margin-left: 60px;
+}
+
+
