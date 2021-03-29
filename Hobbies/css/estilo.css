@@ -44,9 +44,9 @@ article{
 }
 
 .uno{
-    -webkit-animation: spin 1.5s alternate-reverse infinite;
-    -moz-animation: spin 1.5s alternate-reverse infinite;
-    animation: spin 1.5s alternate-reverse infinite;
+    -webkit-animation: span 1.5s alternate infinite;
+    -moz-animation: span 1.5s alternate infinite;
+    animation: span 1.5s alternate infinite;
     height: 150px;
     width: 170px;
     border-radius: 10px;
@@ -54,13 +54,13 @@ article{
     s
 } 
 
-@-webkit-keyframes spin{
+@-webkit-keyframes span{
     100%{-webkit-transform: rotateY(180deg);}
 }
-@-moz-keyframes spin{
+@-moz-keyframes span{
     100%{-webkit-transform-style: preserve-3d;}
 }
-@keyframes spin{
+@keyframes span{
     100%{-webkit-transform: rotateY(180deg);}
 }
 
