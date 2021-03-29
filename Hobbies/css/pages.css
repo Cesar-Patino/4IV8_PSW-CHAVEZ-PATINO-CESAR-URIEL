@@ -34,8 +34,11 @@ html, body{
 .uno{
     height: 150px;
     width: 170px;
-    border-radius: 10px;
+    border-radius: 50%;
     box-shadow: 5px 5px 5px #e7d3af;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
 }
 
 @-webkit-keyframes spin{
@@ -51,23 +54,46 @@ html, body{
 
 .dos{
     height: 250px;
-    width: 320px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 5px #e7d3af;
-}
-
-.tres{
-    height: 200px;
     width: 250px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px #e7d3af;
+    empty-cells: show;
+    -webkit-animation: span 2.5s linear infinite;
+    -moz-animation: span 2.5s linear infinite;
+    animation: span 2.5s linear infinite;
+}
+}
+@-webkit-keyframes span{
+    100%{-webkit-transform:scale(0.5);transform:scale(0.5);}
+}
+
+@-moz-keyframes span{
+    100%{-webkit-transform:scale(0.5);transform:scale(0.5);}
+}
+
+@keyframes span{
+    100%{-webkit-transform:scale(0.5);transform:scale(0.5);}
+    100%{overflow:hidden;}
+}
+
+.tres{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px #e7d3af;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
 }
 
 .cuatro{
     height: 270px;
     width: 400px;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(94, 58, 29);
+    box-shadow: 5px 5px 5px #e7d3af;
+    -webkit-animation: span 2.5s linear infinite;
+    -moz-animation: span 2.5s linear infinite;
+    animation: span 2.5s linear infinite;
 }
 
 .redes{
