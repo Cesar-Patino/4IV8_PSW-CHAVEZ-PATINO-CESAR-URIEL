@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas JS</title>
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <script src="./JS/problema10.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Escoja la aplicación que desea ejecutar</h1>
+        <nav>
+        <section>    
+                <a class="activo" href="problema01.html">Inversión en el banco al 2 %</a>
+        </section>
+
+        <section>
+                <a class="#" href="problema02.html">Sueldo mas comisiones</a>
+        </section>
+
+        <section>
+                <a class="#" href="problema03.html">Calculadora de descuentos</a>
+        </section>
+        
+        <section>
+                <a class="#" href="problema04.html">Calculadora de calificación</a>
+        </section>
+
+        <section>
+                <a class="#" href="problema05.html">Porcentajes género de alumnos</a>
+        </section>
+
+        <section>
+                <a class="#" href="problema06.html">Calculadora edad de persona</a>
+        </section>
+
+        <section>
+                <a class="#" href="problema07.html">Juego con dos números</a>
+        </section>
+
+        <section>
+                <a class="#" href="problema08.html">Mayor de tres números</a>
+        </section>
+
+        <section>
+                <a class="#" href="problema09.html">Calculadora de horas extra</a>
+        </section>
+
+        <section>  
+                <a class="#" href="problema10.html">Calculadora de utilidades</a>
+        </section>
+        </nav>
+    </header>
+
+    <div>
+            <h4>
+                10.- Calcular la utilidad que un trabajador recibe en el reparto anual de utilidades si 
+                este se le asigna como un porcentaje de su salario mensual que depende de su antigüedad en 
+                la empresa de acuerdo con la tabla dada.
+            </h4>
+    </div>
+
+    <div>
+        <form method="post" name="formulario">
+                <table align="center">
+                    <tr>
+                        <td class="td_sup">
+                            Digite su sueldo mensual:
+                        </td>
+                        <td class="td_sup">
+                            <input type="text" name="sueldo" onkeypress="return validarn(event)"> $
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_inf">
+                            Digite su antigüedad en años:
+                        </td>
+                        <td class="td_inf">
+                            <input type="text" name="exp" onkeypress="return validarn(event)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_sup"></td>
+                        <td class="td_sup">
+                            <input type="button" value="Calcular sueldo" name="enviar" onclick="calculo()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_inf">
+                            Utilidad:
+                        <td class="td_inf">
+                            <input type="text" name="utilidad_final" id="cantidad" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_sup">
+                            Sueldo con utilidad:
+                        <td class="td_sup">
+                            <input type="text" name="sueldo_final" id="cantidad" readonly="readonly" class="input_text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_inf"></td>
+                        <td class="td_inf">
+                            <input type="button" value="Borrar" name="reset" onclick="borrar()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+    </div>
+
+
+    <footer>
+        <a href="index.html">Menu Principal</a>
+    </footer>
+</body>
+
+</html>
