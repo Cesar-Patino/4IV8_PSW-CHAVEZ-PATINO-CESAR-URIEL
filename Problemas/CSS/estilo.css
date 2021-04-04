@@ -7,3 +7,63 @@ body {
 
 }
 
+a{
+    display: block;
+    padding: 20px;
+    color: white;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+    transition: all 500ms ease;
+}
+a:visited{
+    color:white;
+    text-decoration: none;
+}
+a:hover{
+    background-color: rgb(106, 225, 255);
+    color: black;
+}
+
+th, td {
+    text-align: center;
+    padding: 1rem;
+}
+
+img{
+    width: 40px;
+    position: relative;
+}
+
+input[type="checkbox"]
+{
+    display: none;
+}
+input[type = "checkbox"]:checked ~ nav
+{
+    transform: translateX(350px);
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.671);
+    width: 350px;
+    height: 120%;
+    left: -350px;
+    position: absolute;
+    transition: all .5s;
+}
+
+h1{
+    color: rgb(255, 0, 0);
+    font-size: 300%;
+    text-align: center;
+    padding: 5%;
+}
+
+p{
+    color: rgba(19, 40, 230, 0.966);
+    font-size: 150%;
+    text-align: center;
+}
