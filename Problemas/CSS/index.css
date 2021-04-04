@@ -7,18 +7,6 @@ body {
 
 }
 
-h1{
-    color: rgb(255, 0, 0);
-    font-size: 200%;
-    text-align: center;
-}
-
-h4{
-    color: black;
-    font-size: 115%;
-    text-align: center;
-}
-
 .lista{
     display: block;
     padding: 13px;
@@ -62,34 +50,28 @@ nav{
     transition: all .5s;
 }
 
-.descripcion{
+h1{
+    color: rgb(255, 0, 0);
+    font-size: 300%;
+    text-align: center;
+}
+
+p{
+    color: black;
+    font-size: 150%;
+    text-align: center;
+}
+
+.javascript{
+    height: 30%;
+    width: 30%;
+}
+
+.bienvenida{
     margin-left: auto;
     margin-right: auto;
     width: 60%;
 
-}
-
-table{
-    border-collapse: collapse;
-	border: 1px solid black;
-	border-style: hidden;
-    font-size: medium;
-    padding: auto;
-    font-weight: bold;
-}
-th, td {
-    text-align: center;
-    padding: 1rem;
-}
-.td_inferior{
-    align-items: center;
-    justify-content: center;
-    background-image: url(../IMG/plata.jpg);
-}
-.td_superior{
-    align-items: center;
-    justify-content: center;
-    background-image: url(../IMG/oro.jpg);
 }
 
 .youtube{
@@ -102,12 +84,5 @@ a{
 }
 
 footer{
-    padding: 40px;
-}
-
-#footer {
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    font-size: large;
+    padding: 27px;
 }
