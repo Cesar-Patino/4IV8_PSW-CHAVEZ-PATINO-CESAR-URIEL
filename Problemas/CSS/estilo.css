@@ -76,6 +76,7 @@ table{
     font-size: medium;
     padding: auto;
     font-weight: bold;
+    margin-bottom: 60px;
 }
 th, td {
     text-align: center;
@@ -85,11 +86,15 @@ th, td {
     align-items: center;
     justify-content: center;
     background-image: url(../IMG/plata.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 .td_superior{
     align-items: center;
     justify-content: center;
     background-image: url(../IMG/oro.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 .youtube{
@@ -102,12 +107,5 @@ a{
 }
 
 footer{
-    padding: 40px;
-}
-
-#footer {
-    position: absolute;
-    bottom: 0;
-    height: 60px;
-    font-size: large;
+    padding: 20px;
 }

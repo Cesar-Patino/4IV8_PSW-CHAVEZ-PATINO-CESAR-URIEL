@@ -28,7 +28,7 @@ function edades(){
         var edadd = año;
         document.formulario.edad.value = edadd + " años.";
     }else{
-        var edadd = año - 1;
+        var edadd = año ;
         document.formulario.edad.value = edadd + " años.";
     }
 

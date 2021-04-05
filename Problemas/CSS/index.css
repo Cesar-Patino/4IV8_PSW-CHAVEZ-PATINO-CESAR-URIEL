@@ -84,5 +84,9 @@ a{
 }
 
 footer{
-    padding: 27px;
+    padding: 20px;
+}
+
+section{
+    margin-bottom: 60px;
 }
