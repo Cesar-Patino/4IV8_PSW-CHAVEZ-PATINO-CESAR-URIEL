@@ -1,19 +1,14 @@
 function problema1(){
+    /*Hace una búsqueda por todos los elementos */
     var p1_input = document.querySelector('#p1-input').value;
-    //identificar como dividir el texto escrito por espacios
+    /*Split separa la cadena por cada espacio que le demos, en este caso */
     var p1_array = p1_input.split(' ').reverse();
-    //habia   aibah
-
-    //construir la nueva cadena invertida
     var p1_res = '';
 
-    p1_array.forEach(function (palabra, i){
-        //si es el principio o es el final de la cadena
-        //y no agregamos espacios en blanco
-        if(i != 0 || i != p1_array.length) p1_res += ' ';
-        p1_res += palabra; 
+    p1_array.forEach(function(palabra, i){
+        if(i != 0 || i != p1_array.length)p1_res += ' ';
+        p1_res += palabra;
     });
-    //imprimir el resultado
     document.querySelector('#p1-output').textContent = p1_res;
 }
 
@@ -29,114 +24,55 @@ function problema2(){
     var p2_y3 = document.querySelector('#p2-y3').value;
     var p2_y4 = document.querySelector('#p2-y4').value;
     var p2_y5 = document.querySelector('#p2-y5').value;
+//construccion de vectores
+    var v1 = [p2_x1, p2_x2,p2_x3,p2_x4,p2_x5];
+    var v2 = [p2_y1, p2_y2,p2_y3,p2_y4,p2_y5];
 
-    //construir los vectores
-
-    var v1 = [p2_x1, p2_x2, p2_x3, p2_x4, p2_x5];
-    var v2 = [p2_y1, p2_y2, p2_y3, p2_y4, p2_y5];
-
-    //ordenar los vectores
-
-    v1 = v1.sort(function (a, b){
+    v1 = v1.sort(function(a,b){
         return b-a;
     });
 
-    v2 = v2.sort(function (a, b){
+    v2 = v2.sort(function(a,b){
         return b-a;
     });
-
-    //invertir el segundo vector
 
     v2 = v2.reverse();
 
-    //producto escalar
     var p2_producto = 0;
 
-    for(var i = 0; i < v1.length; i++){
+    for(var i=0 ; i<v1.length ; i++){
         p2_producto += v1[i] * v2[i];
     }
 
     document.querySelector('#p2-output').textContent =
-    'Producto Escalar: '+ p2_producto;
-
+    'Producto Escalar Minimo : '+ p2_producto;
 }
+//innerhtml agrega codigo de html a una etiqueta ejemplo es la cadena 12 
+//obtenemos el contenido de html como una vex habia blabla
+//document.nombre del formulario.nombre del elemento
 
-function validarentrada(palabra){
-    var longitud = palabra.length;
-    for(var i=0;i<longitud;i++){
-        if((i==0&&palabra.charCodeAt(i)==32)||(i==longitud-1&&palabra.charCodeAt(i)==32)||(palabra.charCodeAt(i)==32&&palabra.charCodeAt(i-1)==32)){
-            if(i==0){
-                alert("No coloque espacios al inicio de la entrada.");
-            }
-            else{
-                if(i==longitud-1){
-                    alert("No coloque espacios al final de la entrada.");
-                }
-                else{
-                    alert("No coloque espacios entre las palabras.");
-                }
-            }
-            return false;
-        }
-    }
-    return true;
-}
 function problema3(){
+    //var p3_input = document.querySelector('#p3-input').value.toUpperCase();
     var p3_input = document.querySelector('#p3-input').value;
-    var longitud;
-    var maximo = 0;
-    var aux;
-    var cubeta = [27];
-    var p3_array;
-    var respuesta;
-    var aux2=0;
-    var aux_array;
-    var bandera;
-    if(validarentrada(p3_input)){
-        p3_array = p3_input.split(',');
-        p3_array.forEach(function (palabra){
-            for(var j=0;j<26;j++){
-                cubeta[j] = false;
-            }
-            aux = 0;
-            longitud = palabra.length;
-            for(var j=0;j<longitud;j++){
-                if(!cubeta[palabra.charCodeAt(j)-65]){
-                    aux++;
-                    cubeta[palabra.charCodeAt(j)-65] = true;
-                }
-            }
-            if(aux>maximo){
-                respuesta = palabra;
-                maximo = aux;
-                aux2 = 1;
-            }
-            else{
-                bandera = true;
-                aux_array = respuesta.split(',');
-                aux_array.forEach(function(palabra_aux){
-                    if(palabra_aux==palabra){
-                        bandera = false;
-                    }
-                })
-                if(bandera == true){
-                    if(aux==maximo){
-                        aux2++;
-                        if(aux2==2){
-                            respuesta+=" y ";
-                            respuesta+=palabra;
-                        }
-                        else{
-                            respuesta = palabra + " , " + respuesta;
-                        }
-                    }
-                }
-            }
-        });
-        document.querySelector('#p3-output').textContent = 'La palabra(s) con mas caracteres unicos es: ' + respuesta + '.';
-    }
-    else{
-        document.querySelector('#p3-input').value = "";
-        document.querySelector('#p3-output').textContent = 'Esperando respuesta...';
+    var p3_array = p3_input.split(',');
+    console.log(p3_array);
+    document.querySelector('#p3-output').innerHTML = "";
+    for(var i=0 ; i<p3_array.length ; i++){
+        var expresion = new RegExp("^[A-Z]+$");
+        if(expresion.test(p3_array[i].trim())){
+
+            a = p3_array[i].trim().split('');
+            var a_sinrepetir = a.filter(function (item, pos){
+                return a.indexOf(item) == pos;
+            });
+            console.log(p3_array[i] + " = " + a_sinrepetir.length + "(" + a_sinrepetir +")");
+            //Ejemplos:
+            //CASA = 3(c, a, s) PERRO= 4(p, e, r, o)
+            document.querySelector('#p3-output').innerHTML += "<p>" + p3_array[i].trim() + " = " + a_sinrepetir.length + "(" + a_sinrepetir +")" + "</p>";
+        }
+        else{
+            alert("No ingresar letras minúsculas " + p3_array[i].trim());
+        }
+       
     }
 }
