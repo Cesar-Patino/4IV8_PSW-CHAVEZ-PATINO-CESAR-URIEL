@@ -84,12 +84,12 @@ button.problema-button{
 
 table.problema-table{
     margin:1rem;
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid black;
 }
 
 td{
-    border-bottom: 1px solid rgb(255, 0, 0);
+    border-bottom: 1px solid black;
     padding-bottom: 1rem;
-    border-left: 1px solid rgb(255, 0, 0);
+    border-left: 1px solid black;
     margin-top: 20px;
 }
