@@ -84,13 +84,13 @@ button.problema-button{
 
 table.problema-table{
     margin:1rem;
-    border: 1px solid black;
+    border: 1px solid rgb(8, 237, 245);
 }
 
 td{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(8, 237, 245);
     padding-bottom: 1rem;
-    border-left: 1px solid black;
+    border-left: 1px solid rgb(8, 237, 245);
     margin-top: 20px;
     text-align: center;
 }
