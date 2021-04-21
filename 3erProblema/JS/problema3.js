@@ -17,13 +17,6 @@ function problema1(){
     document.querySelector('#p1-output').textContent = p1_res;
 }
 
-
-//si es el principio o es el final de la cadena
-//sieselprincipiooeselfinaldelacadena
-//invertir
-//si es elprincipiooeselfinaldelacadena
-
-
 function problema2(){
     var p2_x1 = document.querySelector('#p2-x1').value;
     var p2_x2 = document.querySelector('#p2-x2').value;
@@ -64,7 +57,7 @@ function problema2(){
     }
 
     document.querySelector('#p2-output').textContent =
-    'Producto Escalar Minimo : '+ p2_producto;
+    'Producto Escalar: '+ p2_producto;
 
 }
 
@@ -140,7 +133,7 @@ function problema3(){
                 }
             }
         });
-        document.querySelector('#p3-output').textContent = 'La palabra con más caracteres únicos es: ' + respuesta + '.';
+        document.querySelector('#p3-output').textContent = 'La palabra(s) con mas caracteres unicos es: ' + respuesta + '.';
     }
     else{
         document.querySelector('#p3-input').value = "";
