@@ -25,6 +25,7 @@ function problema2(){
     var p2_y4 = document.querySelector('#p2-y4').value;
     var p2_y5 = document.querySelector('#p2-y5').value;
 //construccion de vectores
+
     var v1 = [p2_x1, p2_x2,p2_x3,p2_x4,p2_x5];
     var v2 = [p2_y1, p2_y2,p2_y3,p2_y4,p2_y5];
 
