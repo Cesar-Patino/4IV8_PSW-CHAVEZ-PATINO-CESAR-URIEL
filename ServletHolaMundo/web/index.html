@@ -9,31 +9,119 @@ and open the template in the editor.
         <title>Registro de Usuarios</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/style.css">
+        <script src="JS/validacion.js" ></script>
     </head>
-    <body>
-        <div class="container" >
-            
-            <form name="formulario" method="post" 
-                  action="Registro">
-                <label>Nombre:</label>
-                <input type="text" name="nombre" >
+     <body>
+        <div class="container">
+            <h1 align="center">CRUD</h1>
+            <br>
+            <hr>
+            <br>
+            <div class="containerRegistro" align="center">
+               
+                <h2>REGISTRAR USUARIO</h2>
                 <br>
-                <label>Apellido Paterno:</label>
-                <input type="text" name="appat" >
+                <form name="formulario" method="get"
+                    action="Registro" onsubmit="return validare(formulario)">
+                    <label>Nombre:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="text" name="nombre" onkeypress="return validarp(event)">
+                    <br>
+                    
+                    <label>Apellido Paterno:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="text" name="appat" onkeypress="return validarp(event)">
+                    <br>
+                    <label>Apellido Paterno:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="text" name="appmat" onkeypress="return validarp(event)">
+                    <br>
+                    <label>Edad:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="number" name="edad" min="01" max="99" size="2" onkeypress="return validarn(event)">
+                    <br>
+                    <label>Correo:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="email" name="correo" onkeypress="return validarcR(event)">
+                    <br>
+                    <br>
+                    <input type="submit" value="Registrar de Usuario">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <input type="reset" value="Borrar Registro">
+                </form> 
+            </div>
+            <br>
+            <hr>
+            <div class="containerConsulta" align="center">
                 <br>
-                <label>Apellido Materno:</label>
-                <input type="text" name="appmat" >
+                <h2>CONSULTAR USUARIOS</h2>
                 <br>
-                <label>Edad:</label>
-                <input type="number" name="edad" min="01" max="99" size="2" >
+                <form method="get" name="consultarregistro" action="Consultar">
+                    <input type="submit" value="Consultar Tabla de Usuarios" >
+                </form>
+            </div>
+            <br>
+            <hr>
+            <div class="containerEliminar" align="center">
                 <br>
-                <label>Correo:</label>
-                <input type="email" name="correo" >
+                <h2>BORRAR USUARIO</h2>
+                <form method="post" name="formularioeliminar" action="Eliminar">
+                    <br>
+                    <label>ID del Usuario a Eliminar:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="number" name="ideliminar" onkeypress="return validarn(event)">
+                    <br>
+                    <br>
+                    <input type="submit" value="Eliminar Usuario"><br>
+                </form>
+            </div>
+            <br>
+            <hr>
+            <div class="containerActualizar" align="center">
                 <br>
-                <input type="submit" value="Registro de Usuarios" >
-                <input type="reset" value="Borrar Registro" >
-            </form>
-            
+                <h2>MODIFICAR USUARIO</h2>
+                <br>
+                <form method="post" name="actualizarregistro" action="Actualizar">
+                    <label>ID del Usuario a Actualizar:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                    <input type="number" name="idactualizar">
+                    <br>
+                        <label>Nombre:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp
+                        </label>
+                        <input type="text" name="nombre_a" onkeypress="return validarp(event)">
+                        <br>
+                        <label>Apellido Paterno:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                        <input type="text" name="appat_a" onkeypress="return validarp(event)">
+                        <br>
+                        <label>Apellido Paterno:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                        <input type="text" name="appmat_a" onkeypress="return validarp(event)">
+                        <br>
+                        <label>Edad:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                        <input type="number" name="edad_a" min="01" max="99" size="2" onkeypress="return validarn(event)">
+                        <br>
+                        <label>Correo:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            &nbsp&nbsp&nbsp&nbsp</label>
+                        <input type="email" name="correo_a" onkeypress="return validarcA(event)">
+                        <br>
+                    <br>
+                    <input type="submit" value="Actualizar Usuario">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    &nbsp&nbsp&nbsp&nbsp&nbsp
+                    <input type="reset" value="Borrar Datos" >
+                </form>
+            </div>
         </div>
     </body>
 </html>
